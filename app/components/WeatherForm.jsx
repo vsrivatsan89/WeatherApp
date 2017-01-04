@@ -5,12 +5,14 @@ var WeatherForm = React.createClass({
     render: function(){
 
         return (
-            <div>
-                <form onSubmit={this.fetchWeather}>
+          
+            <div className="callout primary">
+                <form onSubmit={this.fetchWeather} >
                 <input type="text" placeholder="City name" ref='cityname'/> 
-                <button>Get Weather</button>
+                 <input type="submit" className="button expanded" value="Get Weather"/>
                 </form>
             </div>
+          
         )
 
     },

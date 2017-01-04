@@ -23,14 +23,15 @@ var Weather = React.createClass({
   //This function will go fetch the weather and upate the weather message form etc. 
  var temperature = '';
  var message = '';
+ var that = this;
 
   OpenWeatherMap.getWeather(city).then(function(temp){
 
-   setState({message: 'The weather in ' + city + ' is '+temp});
+   that.setState({message: 'The weather in ' + city + ' is '+temp});
 
   },function(error){
     
-  setState({message: 'City is not found'});
+  that.setState({message: 'City is not found'});
  
   });
 

@@ -14,6 +14,7 @@ getWeather: function(location){
 
     return new Promise(function(resolve, reject){
 
+   
     axios.get(request).then(function(response){
        //console.log(response);
        //alert(JSON.parse(response));
